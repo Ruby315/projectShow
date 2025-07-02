@@ -1,0 +1,254 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* background-color: #55A532; */
+}
+/* Logo 字体 */
+@font-face {
+  font-family: "iconfont logo";
+  src: url('https://at.alicdn.com/t/font_985780_km7mi63cihi.eot?t=1545807318834');
+  src: url('https://at.alicdn.com/t/font_985780_km7mi63cihi.eot?t=1545807318834#iefix') format('embedded-opentype'),
+    url('https://at.alicdn.com/t/font_985780_km7mi63cihi.woff?t=1545807318834') format('woff'),
+    url('https://at.alicdn.com/t/font_985780_km7mi63cihi.ttf?t=1545807318834') format('truetype'),
+    url('https://at.alicdn.com/t/font_985780_km7mi63cihi.svg?t=1545807318834#iconfont') format('svg');
+}
+/* 209010318李洋 */
+
+/* 图片 */
+.playerBox{
+	position: relative;
+}
+.playerBox .playerControl{
+	width: 360px;
+	height: 80px;
+	padding: 20px 30px;
+	background-color: beige;
+	/* 圆角 */
+	border-radius: 15px;
+	display: flex;
+	justify-content: space-between;
+	z-index: 10;
+}
+.playerControl .MusicImg{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: beige;
+	margin-top: -60px;
+	padding: 6px;
+	position: relative;
+	animation: zhuan 5s infinite linear;
+	/* 动画暂停 */
+	/* animation-play-state: paused; */
+}
+.MusicImg img{
+	width: 100%;
+	border-radius: 50%;
+}
+.playerControl .MusicImg::before{
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: beige;
+}
+@keyframes zhuan{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+/* 按钮 */
+.iconfont{
+	font-family:"iconfont" !important;
+	font-size: 26px;
+	/* font-weight: bold; */
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	/* color: #b3b0b0; */
+	transition: all 0.4s;
+	display: block;
+}
+
+#mainControl{
+	width: 40px;
+	height: 40px;
+	display: block;
+}
+	#voice{
+		width: 40px;
+		height: 40px;
+		display: block;
+	}
+	#noneV{
+		font-family:"iconfont" !important;
+		font-size: 26px;
+		width: 40px;
+		height: 40px;
+		display:none;
+	}
+#stopControl{
+	font-family:"iconfont" !important;
+	font-size: 26px;
+	/* font-weight: bold; */
+	width: 40px;
+	height: 40px;
+	z-index: 1;
+	position: relative;
+	display:none;
+}
+.playerControl .Control{
+	width: 60%;
+	display: flex;
+	align-items: center;
+}
+.Control span:hover{
+	border-radius: 6px;
+	background-color: #bababa;
+	color: #fff;
+}
+
+/* 后面 */
+.playerBox .playerThings{
+	width: 90%;
+	position: absolute;
+	/* top: -100%; */
+	top: 0;
+	left: 50%;
+	padding: 10px;
+	transform: translateX(-50%);
+	z-index: -1;
+	background: rgba( 255, 255, 255, 0.2 );
+	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+	backdrop-filter: blur( 7.5px );
+	-webkit-backdrop-filter: blur( 7.5px );
+	border-radius: 10px;
+	border: 1px solid rgba( 255, 255, 255, 0.18 );
+	display: flex;
+	justify-content: flex-end;
+	opacity: 0;
+}
+.playerThings .info{
+	width: 60%;
+	font-size: 10px;
+}
+.info .name{
+	font-size: 14px;
+	font-weight: bold;
+}
+.info .singer{
+	line-height: 20px;
+}
+
+.music_progress .songTime{
+	font-size: 14px;
+	display: flex;
+	justify-content: space-between;
+	color: #0086B3;
+	margin-left: 95px;
+	line-height: 20px;
+}
+
+.music_progress_bar .process {
+	height: 2px;
+	cursor: pointer;
+	background-color: #cccaca;
+	border-radius: 10px;
+	margin-top: 4px;
+}
+.music_progress_bar .processYet {
+	width: 0px;
+	position: absolute;
+	height: 3px;
+	left: 131px;
+	top: 72px;
+	cursor: pointer;
+	border-radius: 10px;
+	background-color: #0086B3;
+}
+
+.bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -2;
+	width: 100%;
+	height: 100%;
+	background: url("https://p1.music.126.net/yH_6aInrJKqtdIB4sEDUsQ==/109951168274199443.jpg?param=130y130")
+	no-repeat center center;
+	background-size: cover;
+	/* 模糊 */
+	filter: blur(50px);
+	transition: all 1s;
+	
+}
+.modal{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.modal .modal-box {
+  width: 30%;
+  height: 100%;
+  padding: 20px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.modal-box .modal-box-top {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-box-top .modal-close {
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+
+.modal-box-top .modal-close:hover {
+  transform: rotate(180deg);
+}
+
+.modal-box .modal-wrapper {
+  width: 100%;
+  height: calc(100% - 40px);
+  overflow-y: auto;
+}
+
+.modal-wrapper .music-list {
+  list-style: none;
+}
+.music-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgb(186, 182, 182);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

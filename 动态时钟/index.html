@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title> Dynamic Digital Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+   </head>
+<body>
+  <section>
+    <div class="container">
+      <div class="icons">
+        <!-- 晚上和白天切换的图标 -->
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+      </div>
+      <div class="time">
+        <div class="time-colon">
+          <div class="time-text">
+            <span class="num hour_num">08</span>
+            <span class="text">Hours</span>
+          </div>
+          <span class="colon">:</span>
+        </div>
+        <div class="time-colon">
+          <div class="time-text">
+            <span class="num min_num">45</span>
+            <span class="text">Minutes</span>
+          </div>
+          <span class="colon">:</span>
+        </div>
+        <div class="time-colon">
+          <div class="time-text">
+            <span class="num sec_num">06</span>
+            <span class="text">Seconds</span>
+          </div>
+          <span class="am_pm">AM</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <script>
+  let section = document.querySelector("section"),
+  icons = document.querySelector(".icons");
+
+  icons.onclick = ()=>{
+    // 点击icon图标后切换样式
+    section.classList.toggle("dark");
+  }
+
+  // 创建一个函数并每隔几秒钟调用一次
+  setInterval(()=>{
+
+    // 获取时间
+    let date = new Date(),
+    hour = date.getHours(),
+    min = date.getMinutes(),
+    sec = date.getSeconds();
+
+    let d;
+    d = hour < 12 ? "AM" : "PM"; //如果小时小于12，则其值为AM，否则其值为pm
+    hour = hour > 12 ? hour - 12 : hour; //如果小时值大于12，则减去12（通过这样做，我们将得到直到12的值，而不是13、14或24）
+    hour = hour == 0 ? hour = 12 : hour; //如果小时值为0，则其值将为12
+
+    // 如果小于10，则在所有值的前面加字符0
+    hour = hour < 10 ? "0" + hour : hour;
+    min = min < 10 ? "0" + min : min;
+    sec = sec < 10 ? "0" + sec : sec;
+
+    // 更改时间
+    document.querySelector(".hour_num").innerText = hour;
+    document.querySelector(".min_num").innerText = min;
+    document.querySelector(".sec_num").innerText = sec;
+    document.querySelector(".am_pm").innerText = d;
+
+  }, 1000); // 1000 ms = 1s，每秒执行一次
+
+  </script>
+
+</body>
+</html>

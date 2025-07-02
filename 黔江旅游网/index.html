@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>黔江旅游网站</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="css/public.css">
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+		<!-- Link Swiper's CSS -->
+		<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.css">
+		<link rel="stylesheet" href="../package/css/swiper.min.css">
+		<!-- Swiper JS -->
+		<script src="https://unpkg.com/swiper@8/swiper-bundle.js"> </script>
+		<link rel="stylesheet" href="css/index.css">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		
+	</head>
+	<body>
+	<div>
+
+		
+		<header>
+			<a href="#" class="logo"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAABDCAYAAADTXyaSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjc1ODY4ODcxNEVBRjExRTg5Q0NCREVBNkU0QTg0QURFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjc1ODY4ODcyNEVBRjExRTg5Q0NCREVBNkU0QTg0QURFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NzU4Njg4NkY0RUFGMTFFODlDQ0JERUE2RTRBODRBREUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NzU4Njg4NzA0RUFGMTFFODlDQ0JERUE2RTRBODRBREUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7hwwefAAAOjUlEQVR42uxb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
+" alt=""></a>
+				<ul class="nav">
+					<li><a href="#">首页</a></li>
+					<li class="nav1">
+						<a href="#">玩转黔江</a>
+						<ul class="scend">
+							<li><a href="#">濯水景区</a></li>
+							<li><a href="#">城市大峡谷</a></li>
+							<li><a href="#">小南海景区</a></li>
+							<li><a href="#">十三寨景区</a></li>
+							<li><a href="#">阿蓬神龟峡</a></li>
+							<li><a href="#">爱丽丝庄园</a></li>
+							<li><a href="#">城市地标</a></li>
+						  </ul>
+					</li>
+					<li class="nav1">
+						<a href="#">定制旅程</a>
+						<ul class="scend">
+							<li><a href="#">特色之旅</a></li>
+							<li><a href="#">旅游路线</a></li>
+							<li><a href="#">地方特产</a></li>
+							<li><a href="#">美食之旅</a></li>
+							<li><a href="#">游玩指南</a></li>
+						  </ul>
+					</li>
+					<li  class="nav1">
+						<a href="#">乡村旅游</a>
+						<ul class="scend">
+							<li><a href="#">一江两岸</a></li>
+							<li><a href="#">云上水市</a></li>
+							<li><a href="#">白土三塘盖</a></li>
+							<li><a href="#">土家十三寨</a></li>
+							<li><a href="#">城市大峡谷</a></li>
+							<li><a href="#">古韵濯水</a></li>
+						  </ul>
+					</li>
+					<li class="nav1">
+						<a href="#">民族风情</a>
+						<ul class="scend">
+							<li><a href="#">历史文化</a></li>
+							<li><a href="#">非物遗产</a></li>
+							<li><a href="#">土家博物馆</a></li>
+							<li><a href="#">苗寨风情</a></li>
+							<li><a href="#">民族习俗</a></li>
+							<li><a href="#">文化表演</a></li>
+						  </ul>
+					</li>
+					<li  class="nav1"><a href="#">门票预定</a></li>
+				</ul>
+			
+		</header>
+		<section class="banner1">
+			<div class="banner2" id="banner2">
+				<div class="banner_k1">
+					<div class="banner_tu1">
+						<ul class="banner_ul1" id="ulLb2">
+							<li>
+								<a href="#"><img src="img\banner2.png" ></a>
+							</li>
+							<li>
+								<a href="#"><img src="img\banner3.png" ></a>
+							</li>
+							<li>
+								<a href="#"><img src="img\banner4.png" ></a></li>
+							<li>
+								<a href="#"><img src="img\banner5.png" ></a>
+							</li>	
+						</ul>
+					</div>
+					<div class="banner_Dian" id="dian">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 搜索按钮 -->
+		<div class="search-box">
+			<input class="search-txt" type='text' id='inp' />
+			<ion-icon name="search-outline" class="search-btn">
+				<input type='button' id='btn' value='&#xf002' />
+			</ion-icon>
+			
+		</div>
+		<!-- 特色之旅 -->
+		<div class="trval">
+			<div>
+				<img src="img\2222.png" alt="" class="TrImg">
+				<div class="trW">
+					特色之旅<p>/FEATURED TOUR</p>
+				</div>
+			</div>
+			
+			
+			<div class="TrPic">
+				<ul>
+					<li>
+						<img src="img\cb2189ea9f1d4f90a2f64ef86cdede89.jpg" alt="">
+						<p>红色之旅</p>
+					</li>
+					<li>
+						<img src="img\124723D2F82AA7366011BC3ADB8CE5EC.jpg" alt="">
+						<p>清凉度假</p>
+					</li>
+					<li>
+						<img src="img\4a1165be9790f741373f418231cabe19.jpg" alt="">
+						<p>科考探险</p>
+					</li>
+					<li>
+						<img src="img\ca5ec613dd0be406bc1358787afa35a3.jpg" alt="">
+						<p>良心之旅</p>
+					</li>
+					<li>
+						<img src="img\9a42c148bee8912996a3acac2012e79e.jpg" alt="">
+						<p>爱情之旅</p>
+					</li>
+					<li>
+						<img src="img\8CED71DFC36C837E962E73C4D214E799.jpg" alt="">
+						<p>风味特产</p>
+					</li>
+				</ul>
+				</ul>
+			</div>
+			
+		</div>
+		<div>
+			<div class="vidothing">
+				<div class="things">
+					<div class="thingsW">黔江概况</div>	
+						<p>阿蓬江“一江两岸”休闲农业与乡村旅游示范带，可以说处处是景。唐代诗人刘禹锡又写过“黔江秋水浸云霓，独泛慈航路不迷。”唐代另一位诗人许浑写过“黔江水暖还曾饮，楚岫云深不识寒。”可见黔江四季有景。如果你是春季来到这里，沿江花海将给你面朝碧水、春暖花开的享受，两岸的油菜</p>
+					<div class="more"><a href="#">查看更多</a> </div>
+				</div>
+			</div>
+			<div class="vido">
+				<video src="黔江旅游网/img/mda-nir13tqw5rv64r9f~2.mp4" controls="controls" autoplay="autoplay" loop="loop" width="100%" height="459px"></video>
+			</div>
+		</div>
+		<!-- 民族风情 -->
+		<div class="minzu">
+			<div>
+				<img src="img/2222.png" alt="" class="TrImg">
+				<div class="trW">
+					民族风情<p>/FNATIONAL CUSTOMS</p>
+				</div>
+			</div>
+		</div>
+			<div class="TrPic1">
+				<ul>
+					<li>
+						<img src="img\76380e12fd1c3e5b96cf1c6d127510fb.jpg" alt="">
+						<p>非物遗产</p>
+					</li>
+					<li>
+						<img src="img\C0DA6F0D163D9B0A951CDF8F0FD5C8A0.jpg" alt="">
+						<p>苗寨风情</p>
+					</li>
+					<li>
+						<img src="https://img1.baidu.com/it/u=549634084,1333171197&fm=253&fmt=auto&app=138&f=JPEG?w=700&h=446" alt="">
+						<p>民族习俗</p>
+					</li>
+					<li>
+						<img src="img\9dd049bd325f538289b0e73b5947d117.jpg" alt="">
+						<p>文化表演</p>
+					</li>
+					
+				</ul>
+			</div>
+			<div class="mz">
+				<div class="minZunimg">
+					<img src="https://www.qianjiang.gov.cn/zjqj/msfq/201912/W020191210536810619319.jpg" alt="">
+				</div>
+				<div class="vidothing2">
+					<div class="things2">
+						<div class="thingsW2">民族文化</div>	
+							<p>黔江是多民族聚居之地，少数民族达14个。在这里世居的土家族、苗族占总人口的一半以上。由于各民族交错杂居，长期的经济交流、文化交往，风俗相染、语言相融，共同进步，共同发展，创造了这里独特的文明史。</p>
+						<div class="more"><a href="#">查看更多</a> </div>
+					</div>
+				</div>
+				
+			</div>
+
+		
+			<div class="qjImg">
+				<p class="qjW">
+					中国峡谷城 • 武陵会客厅——清新黔江欢迎您
+				</p>
+				<img src="img\PNGG.png" alt="">
+			</div>
+
+			<!-- News -->
+		<div class="new">
+				<div>
+					<img src="img\2222.png" alt="" class="TrImg">
+					<div class="trW">
+						新闻资讯<p>/NEWS</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="TrPic2">
+			<ul>
+				<li>
+					<img src="img\5dc1bdce1e534409be40de7b2346c5340.png" alt="">
+					<p>黔江旅游宣传片</p>
+				</li>
+				<li>
+					<img src="img\6a93e16f82099ec05ede91fb4f824efc.jpg" alt="">
+					<p>峡谷风情</p>
+				</li>
+				<li>
+					<img src="img\0000.jpg" alt="">
+					<p>黔江文化教育之旅</p>
+				</li>
+				<li>
+					<img src="img\805f1103f79ae88f9ded92a2c393ac43.jpg" alt="">
+					<p>黔江景区门票大优惠！</p>
+				</li>
+				
+			</ul>
+		</div>
+		<!-- 地理位置 -->
+		<div class="new">
+			<div>
+				<img src="img\2222.png" alt="" class="TrImg">
+				<div class="trW">
+					地理位置<p>/Map</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="mapp">
+			<div id="container"></div>
+		</div>
+
+		<!-- footer -->
+		<div class="TravlWordes">
+			<ul>
+				<li>
+					<ul>
+						<li class="boder">旅游企业</li>
+						<li class="nomal"><a href="#">重庆峡谷城文旅集团有限公司</a> </li>
+						<li class="nomal"><a href="#">重庆爱莉丝庄园文化创意有限公司</a> </li>
+						<li class="nomal"><a href="#"> 重庆峡谷城旅游景区管理股份有限公司</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li class="boder">旅行社</li>
+						<li class="nomal"><a href="#">重庆市阿蓬江旅行社股份有限公司</a> </li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li  class="boder">24小时客服电话:</li>
+						<li class="nomal">023-79081176</li>
+						<li class="boder">地址:</li>
+						<li class="nomal">重庆市黔江区正阳街道黔州大道西段50号博宏大厦</li>
+					</ul>
+				</li>
+				<li>
+					<ul class="FooterRQ">
+						<li><img class="FooterRQImg" src="img\下载.jpg" alt=""></li>
+						<li class="nomal2">黔江文旅</li>
+						<li class="nomal2"> 扫一扫关注</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
+
+		<!-- 版权 -->
+		<footer class="banquan">
+			<div class="banquanW">
+				Copyright © 2006-2022 黔江旅游&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;渝公网安备 50011402500183号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;渝ICP备16009858号-6
+			</div>
+		</footer>
+	</div>
+		
+	
+		<script src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=P4L12kUZGHlzBDM2V4CHpIaNWYuIpVG6"></script>
+		<script type="text/javascript">
+			// 导航
+		window.addEventListener("scroll",function(){
+			var header = document.querySelector("header");
+			// header.classList.toggle("sticky", window.scrollY > 0);
+			if(window.scrollY>0)
+            {
+                header.classList.add("sticky");
+            }else{
+                header.classList.remove("sticky");
+            }
+		})	
+
+		//搜索框
+		var oInp = document.getElementById('inp');
+   		var oBtn = document.getElementById('btn');
+
+    	oBtn.onclick = function () {
+        	Search();
+    	}
+
+    	document.onkeydown = function () {
+        	if (event.keyCode == 13) {
+            	Search();
+        	}
+    	}
+		//轮播1
+		let dian = document.querySelector("#dian");
+		let ulLb = document.querySelector("#ulLb2");
+		let banner=document.getElementById("banner2");
+		let dian_zi = dian.children;
+		
+		function findXD( tag ){
+			let  parent = tag.parentNode ; 
+			let  sbs = parent.children ;
+			let  arr = []; 
+			for(let i=0 ; i<=sbs.length-1 ; i++){
+				if(sbs[i] != tag){
+					arr.push( sbs[i] );
+				} 
+			}
+			return arr ;
+		}
+		dian_zi[0].addEventListener("mouseenter",function(){
+			ulLb.style.marginLeft = `${0}px`;
+			this.style.background="#636363";
+			let xds=findXD(this);
+			xds[0].style.background="#fff";
+			xds[1].style.background="#fff";
+			xds[2].style.background="#fff";
+			xds[3].style.background="#fff";
+			});
+		dian_zi[1].addEventListener("mouseenter",function(){
+			ulLb.style.marginLeft = `${-1600*1}px`;
+			this.style.background="#636363";
+			let xds=findXD(this);
+			xds[0].style.background="#fff";
+			xds[1].style.background="#fff";
+			xds[2].style.background="#fff";
+			xds[3].style.background="#fff";
+			});
+		dian_zi[2].addEventListener("mouseenter",function(){
+			ulLb.style.marginLeft = `${-1600*2}px`;
+			this.style.background="#636363";
+			let xds=findXD(this);
+			xds[0].style.background="#fff";
+			xds[1].style.background="#fff";
+			xds[2].style.background="#fff";
+			xds[3].style.background="#fff";
+			});
+		dian_zi[3].addEventListener("mouseenter",function(){
+			ulLb.style.marginLeft = `${-1600*3}px`;
+			this.style.background="#636363";
+			let xds=findXD(this);
+			xds[0].style.background="#fff";
+			xds[1].style.background="#fff";
+			xds[2].style.background="#fff";
+			xds[3].style.background="#fff";
+			});
+		let i=0;
+		dian_zi[0].style.background="#636363";
+		function changpicture(){
+			i++;
+			if(i<=4){
+				ulLb.style.marginLeft = `${-1600*i}px`;
+				dian_zi[i].style.background="#636363"; 
+				let xds=findXD(dian_zi[i]);
+				xds[0].style.background="#fff";
+				xds[1].style.background="#fff";
+				xds[2].style.background="#fff";
+				xds[3].style.background="#fff";
+			}
+			else{
+				ulLb.style.marginLeft=`${0}px`;
+				dian_zi[0].style.background="#636363";
+				let xds=findXD(dian_zi[0]);
+				xds[0].style.background="#fff";
+				xds[1].style.background="#fff";
+				xds[2].style.background="#fff";
+				xds[3].style.background="#fff";
+				i=0;
+			}
+		}
+		let chang=setInterval(changpicture,5000);
+
+		
+		//地图
+		var map = new BMapGL.Map('container'); // 创建Map实例
+		map.centerAndZoom(new BMapGL.Point(108.77, 29.53), 12); // 初始化地图,设置中心点坐标和地图级别
+		map.enableScrollWheelZoom(true); // 开启鼠标滚轮缩放
+
+    	
+		</script>
+	</body>
+</html>
